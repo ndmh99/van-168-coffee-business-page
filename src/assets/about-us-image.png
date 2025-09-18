@@ -1,0 +1,4 @@
+// Placeholder image for the 'About Us' section.
+// Replace with a real photo of the cafe's interior or team.
+import aboutImg from './react.svg';
+export default aboutImg;

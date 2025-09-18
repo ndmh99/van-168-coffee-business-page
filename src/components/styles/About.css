@@ -1,0 +1,173 @@
+/* About Page Design */
+.about-section {
+  background-color: var(--cream-soft);
+  padding: 8vw 5vw;
+  font-family: 'Georgia', serif;
+}
+
+.about-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5vw;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.about-story-panel {
+  position: sticky;
+  top: 100px;
+}
+
+.about-main-title {
+  font-size: 1.8rem;
+  color: var(--wood-brown);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about-main-subtitle {
+  font-size: 1.2rem;
+  color: var(--fresh-green);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.about-story-text {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
+}
+
+.about-story-quote {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: var(--cream-bright);
+  border-left: 4px solid var(--flower-pink);
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.about-story-quote p {
+  margin: 0 0 0.5rem;
+}
+
+.about-story-quote footer {
+  font-style: italic;
+  color: var(--wood-brown);
+  font-weight: bold;
+}
+
+.about-visuals-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.about-video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 10px 10px 0px var(--wood-brown-2);
+  border: 2px solid var(--wood-brown);
+}
+
+.about-showcase-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hand-written Note Styles */
+.handwritten-note-container {
+  position: relative;
+  padding: 2rem;
+}
+
+.note-pin {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #ff4b5c;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+.note-pin::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.handwritten-note {
+  background-color: #fffaf0; /* A creamy, paper-like color */
+  background-image: url('https://www.transparenttextures.com/patterns/paper.png'); /* Paper texture */
+  padding: 40px 30px 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  font-family: 'Caveat', cursive; /* A handwriting-style font */
+  transform: rotate(-2deg);
+  border: 1px solid #eee;
+}
+
+.note-title {
+  font-size: 2rem;
+  color: var(--wood-brown);
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.note-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.note-icon {
+  font-size: 1.5rem;
+  color: var(--fresh-green);
+  margin-top: 2px;
+}
+
+.note-text {
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.note-description {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .about-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .about-story-panel {
+    position: static;
+    top: auto;
+    margin-bottom: 3rem;
+  }
+}

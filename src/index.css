@@ -1,0 +1,40 @@
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { font-weight: 500; color: var(--fresh-green); text-decoration: inherit; }
+a:hover { color: var(--flower-red); }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: #3b2f2f;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-bright) 100%);
+}
+
+h1 { font-size: 3.2em; line-height: 1.1; color: var(--wood-brown); }
+
+button {
+  border-radius: 10px;
+  border: 1px solid rgba(139, 69, 19, 0.18);
+  padding: 0.6em 1.1em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: #fff;
+  color: #3b2f2f;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.08s ease, background-color 0.2s ease;
+}
+button:hover { box-shadow: 0 8px 22px rgba(139, 69, 19, 0.16); }
+button:active { transform: translateY(1px); }
+button:focus, button:focus-visible { outline: 3px solid rgba(46, 139, 87, 0.3); outline-offset: 2px; }
+
+/* Sections define their own backgrounds; keep the page canvas calm */
