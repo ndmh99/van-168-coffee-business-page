@@ -22,14 +22,14 @@ function Contact() {
 							<div className="info-icon">📍</div>
 							<div>
 								<div className="info-title">Location</div>
-								<div className="info-detail">168 Main St, Vancouver, BC</div>
+								<div className="info-detail">138-888 Kingsway, Vancouver, BC V5V 3C3</div>
 							</div>
 						</div>
 						<div className="info-card">
 							<div className="info-icon">☎️</div>
 							<div>
 								<div className="info-title">Phone</div>
-								<div className="info-detail">(604) 555-0168</div>
+								<div className="info-detail">604-428-6968</div>
 							</div>
 						</div>
 						<div className="info-card">

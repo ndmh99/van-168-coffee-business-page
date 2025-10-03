@@ -6,7 +6,7 @@ function About() {
     title: "A Founder's Journey",
     subtitle: "From Resilience to Restaurant",
     paragraphs: [
-      "The story of Van 168 Coffee is the story of the founder when she first came to Canada almost 40 years ago, Lynda carried with her the recipes and culinary traditions taught by her mother. This love for cooking, combined with a desire to share the amazing flavors of Northern Vietnam, became the heart of Van 168 Coffee. Today, she is proud to have built a life with her husband and three wonderful children, and starting to share her heritage one delicious dish at a time. Van 168 Coffee was established in 2023."
+      "Van 168 Coffee began with founder Lynda’s journey to Canada nearly 40 years ago. Bringing her mother’s recipes and the rich culinary traditions of Northern Vietnam, she combined her love of cooking with a passion for sharing her heritage. Now a proud wife and mother of three, Lynda is excited to share her culture—one delicious dish at a time. Van 168 Coffee was established in 2023."
     ],
     quote: {
       text: "I wanted to bring the unique taste of my home to everyone. Seeing people enjoy the food I make is my greatest joy.",
@@ -14,19 +14,16 @@ function About() {
     },
     highlights: [
       {
-        icon: "🍽️",
-        title: <strong>Flavorful Dishes</strong>,
-        description: "Experience the rich flavors of Viet Cuisine."
+        title: <strong>ᯓ Ngon</strong>,
+        description: "Delicious Dishes with variety."
       },
       {
-        icon: "☕",
-        title: <strong>Premium Coffee Taste</strong>,
-        description: "Savor the amazing taste of one of the finest coffees."
+        title: <strong>ᯓ Bổ</strong>,
+        description: "Nutritious Ingredients for Health."
       },
       {
-        icon: "❤️",
-        title: <strong>Customer-Centric</strong>,
-        description: "A welcoming space for connection and community."
+        title: <strong>ᯓ Rẻ</strong>,
+        description: "Affordable Prices for All."
       }
     ]
   };
@@ -62,7 +59,6 @@ function About() {
               <h4 className="note-title">What We Offer</h4>
               {storyData.highlights.map((highlight, index) => (
                 <div key={index} className="note-item">
-                  <span className="note-icon">{highlight.icon}</span>
                   <p className="note-text">{highlight.title}: <span className="note-description">{highlight.description}</span></p>
                 </div>
               ))}

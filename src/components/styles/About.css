@@ -69,7 +69,8 @@
 
 .about-video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
   width: 100%;
@@ -101,7 +102,7 @@
   height: 30px;
   background-color: #ff4b5c;
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
 
@@ -118,22 +119,30 @@
 }
 
 .handwritten-note {
-  background-color: #fffaf0; /* A creamy, paper-like color */
-  background-image: url('https://www.transparenttextures.com/patterns/paper.png'); /* Paper texture */
+  background-color: #fffaf0;
+  /* A creamy, paper-like color */
+  background-image: url('https://www.transparenttextures.com/patterns/paper.png');
+  /* Paper texture */
   padding: 40px 30px 30px;
   border-radius: 5px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-  font-family: 'Caveat', cursive; /* A handwriting-style font */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Schoolbell', cursive;
+  /* A handwriting-style font */
   transform: rotate(-2deg);
   border: 1px solid #eee;
 }
 
 .note-title {
-  font-size: 2rem;
+  font-size: 3.5rem;
   color: var(--wood-brown);
   text-align: center;
   margin-bottom: 20px;
   font-weight: bold;
+
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
 }
 
 .note-item {
@@ -143,21 +152,17 @@
   margin-bottom: 15px;
 }
 
-.note-icon {
-  font-size: 1.5rem;
-  color: var(--fresh-green);
-  margin-top: 2px;
-}
-
 .note-text {
-  font-size: 1.3rem;
+  font-size: 2.3rem;
   color: #333;
   line-height: 1.6;
+  font-family: 'American Typewriter', serif;
 }
 
 .note-description {
   color: #555;
-  font-size: 1.1rem;
+  font-size: 2.1rem;
+  font-family: 'Schoolbell', cursive;
 }
 
 /* Responsive adjustments */
@@ -165,6 +170,7 @@
   .about-grid-container {
     grid-template-columns: 1fr;
   }
+
   .about-story-panel {
     position: static;
     top: auto;

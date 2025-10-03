@@ -1,15 +1,18 @@
 import './styles/Menu.css';
 import { useState } from 'react';
-
+import snailVermicelli from '../assets/menu-items/snail-vermicelli-soup-24.png';
+import phoSpecialBeef from '../assets/menu-items/spicy-beef-pho-3.png';
+import phoChicken from '../assets/menu-items/chicken-pho-5.png';
+import condensedMilkCoffee from '../assets/menu-items/viet-condensed-milk-coffee.png';
 // Featured items (top sellers / signatures)
 const featuredItems = [
-	{ name: 'BÚN ỐC CHẢ ỐC', en: 'Freshwater Snail and Snail Stick Vermicelli', prices: { S: 15, L: 17.5 }, tag: 'Signature' },
-	{ name: 'BÚN RIÊU CHẢ CÁ, CHẢ TÔM', en: 'Fish Cake, Shrimp Cake & Crab Paste Vermicelli Soup', prices: { S: 15, L: 17.5 }, tag: 'Signature' },
-	{ name: 'BÚN BÒ HUẾ', en: 'Spicy Huế Style Soup', prices: { S: 15, L: 17.5 }, tag: 'Spicy' },
-	{ name: 'PHỞ ĐẶC BIỆT BÒ', en: 'House Special Noodle Soup with Beef', price: 18, tag: 'Customer Favorite' },
-	{ name: 'CÀ PHÊ SỮA ĐÁ', en: 'Vietnamese Iced Coffee', price: 7.5, tag: 'Best Seller' },
-	{ name: 'GỎI CUỐN TÔM THỊT GÀ (2 CUỐN)', en: 'Steamed Salad Roll with Chicken and Shrimp. Comes in 2 Pieces', price: 10, tag: 'Light' },
-	{ name: 'CHÈ THẬP CẨM', en: 'Assorted Dessert', price: 8.5, tag: 'Sweet' },
+	{ name: '24. BÚN ỐC CHẢ ỐC', en: 'Freshwater Snail and Snail Stick Vermicelli', prices: { S: 15, L: 17.5 }, tag: 'Signature', img: snailVermicelli },
+	{ name: '19. BÚN RIÊU CHẢ CÁ, CHẢ TÔM', en: 'Fish Cake, Shrimp Cake & Crab Paste Vermicelli Soup', prices: { S: 15, L: 17.5 }, tag: 'Signature', img: 'https://placehold.co/400' },
+	{ name: '16. BÚN BÒ HUẾ', en: 'Spicy Huế Style Soup', prices: { S: 15, L: 17.5 }, tag: 'Spicy', img: phoSpecialBeef },
+	{ name: '5. PHỞ GÀ', en: 'Chicken Noodle Soup', prices: { S: 14, L: 16 }, tag: 'Customer Favorite', img: phoChicken },
+	{ name: 'CÀ PHÊ SỮA ĐÁ', en: 'Vietnamese Iced Coffee', price: 7.5, tag: 'Best Seller', img: condensedMilkCoffee },
+	{ name: 'GỎI CUỐN TÔM THỊT GÀ (2 CUỐN)', en: 'Steamed Salad Roll with Chicken and Shrimp. Comes in 2 Pieces', price: 10, tag: 'Light', img: 'https://placehold.co/400' },
+	{ name: 'CHÈ THẬP CẨM', en: 'Assorted Dessert', price: 8.5, tag: 'Sweet', img: 'https://placehold.co/400' },
 ];
 
 // Categorized full set (subset here for UI)
@@ -81,6 +84,12 @@ function PriceDisplay({ price, prices }) {
 function FeaturedCard({ item }) {
 	return (
 		<div className="featured-card">
+			<img
+				src={item.img}
+				alt={item.name}
+				className="featured-image"
+				loading="lazy"
+			/>
 			<div className="featured-card-header">
 				<h4 className="featured-name">{item.name}</h4>
 				{item.tag && <span className="featured-tag">{item.tag}</span>}
@@ -135,9 +144,8 @@ function Menu() {
 			<div className="menu-inner">
 				<header className="menu-top">
 					<h2 className="menu-heading">MENU</h2>
-					<p className="menu-intro">Signature bowls, comforting plates, and crafted drinks. Explore guest favorites below.</p>
 				</header>
-
+				<p className="menu-intro">Top Featured Items</p>
 				<div className="featured-scroll">
 					{featuredItems.map(fi => <FeaturedCard key={fi.name} item={fi} />)}
 				</div>

@@ -1,9 +1,9 @@
 
 import './styles/Hero.css';
-import heroImg from '../assets/hero-main-image.png'; // Add a hero image to assets folder if not present
-import heroImg2 from '../assets/hero-secondary-image-1.png'; // Add secondary hero images to assets folder if not present
-import heroImg3 from '../assets/hero-secondary-image-2.png'; // Add secondary hero images to assets folder if not present
-import heroImg4 from '../assets/hero-secondary-image-3.png'; // Add secondary hero images to assets folder if not present
+import heroImg from '../assets/hero-main-image.png';
+import heroImg2 from '../assets/hero-secondary-image-1.png';
+import heroImg3 from '../assets/hero-secondary-image-2.png';
+import heroImg4 from '../assets/hero-secondary-image-3.png';
 
 function Hero() {
     const scrollToMenu = () => {

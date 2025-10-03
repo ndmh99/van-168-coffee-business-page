@@ -3,7 +3,7 @@
 /* Modern showcase menu */
 .showcase-menu {
   position: relative;
-  padding: 120px 30px 140px;
+  padding: 80px 30px 140px;
   background: url('https://images.unsplash.com/photo-1757664712627-868519088717?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
   color: var(--cream);
 }
@@ -21,13 +21,18 @@
 .menu-heading {
   font-family: 'Dancing Script', cursive;
   font-size: 3.5rem;
-  margin: 0 0 10px;
+  margin: 0 0 50px;
   color: var(--cream-bright);
   text-shadow: 0 6px 18px rgba(0,0,0,0.4);
   text-align: center;
 }
-
-.menu-intro { text-align: center; max-width: 640px; margin: 0 auto 50px; font-size: 1.15rem; line-height: 1.6; color: var(--cream-soft); }
+.menu-intro {
+  font-size: 1.3rem;
+  color: var(--cream-soft);
+  line-height: 1.6;
+  font-weight: bold;
+  margin: 0 0 0 10px;
+}
 
 /* Featured horizontal scroll */
 .featured-scroll {

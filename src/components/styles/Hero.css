@@ -1,6 +1,6 @@
 .hero-section {
   min-height: 100vh;
-  background: linear-gradient(120deg, var(--wood-brown) 0%, var(--wood-brown-2) 100%);
+  background: url('../../assets/restaurant-inside.png') no-repeat center center/cover;
   position: relative;
   display: flex;
   align-items: center;
@@ -8,6 +8,17 @@
   overflow: hidden;
   color: var(--cream);
   padding: 0 2vw;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
 }
 
 /* Floating Lanterns */
@@ -51,8 +62,15 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(5deg); }
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
 }
 
 /* Hero Content */
@@ -78,7 +96,7 @@
   margin-bottom: 1.2rem;
   margin-top: 0;
   color: var(--cream-bright);
-  text-shadow: 2px 2px 8px rgba(139,69,19,0.25);
+  text-shadow: 2px 2px 8px rgba(139, 69, 19, 0.25);
 }
 
 .hero-tagline {
@@ -98,22 +116,23 @@
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
-  box-shadow: 0 6px 24px rgba(220,20,60,0.15);
-  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+  box-shadow: 0 6px 24px rgba(220, 20, 60, 0.15);
+  transition: all 0.3s cubic-bezier(.4, 2, .6, 1);
 }
 
 .hero-cta-button:hover {
   background: var(--fresh-green);
   color: var(--cream);
   transform: translateY(-3px) scale(1.04);
-  box-shadow: 0 10px 30px rgba(46,139,87,0.18);
+  box-shadow: 0 10px 30px rgba(46, 139, 87, 0.18);
 }
 
 /* Overlapping image frames aesthetic */
 .hero-image-container {
   position: relative;
   min-width: 280px;
-  height: 420px; /* Adjust height to contain the images */
+  height: 420px;
+  /* Adjust height to contain the images */
   display: block;
   margin-right: 120px;
 }
@@ -123,7 +142,7 @@
   object-fit: cover;
   background: var(--cream-bright);
   border: 4px solid var(--cream-soft);
-  box-shadow: 0 8px 32px rgba(139,69,19,0.18);
+  box-shadow: 0 8px 32px rgba(139, 69, 19, 0.18);
 }
 
 .hero-showcase-image--main {
@@ -141,7 +160,7 @@
   height: 220px;
   border-radius: 1.2rem 0.5rem 1.2rem 0.5rem;
   opacity: 0.92;
-  box-shadow: 0 4px 16px rgba(139,69,19,0.10);
+  box-shadow: 0 4px 16px rgba(139, 69, 19, 0.10);
   border-width: 2px;
 }
 
@@ -152,12 +171,14 @@
   transform: rotate(-12deg);
   z-index: 9;
 }
+
 .hero-showcase-image--secondary:nth-of-type(3) {
   left: 95%;
   top: 60%;
   transform: rotate(10deg);
   z-index: 8;
 }
+
 .hero-showcase-image--secondary:nth-of-type(4) {
   left: 40%;
   top: 80%;
@@ -169,7 +190,7 @@
   font-size: 4rem;
   font-family: 'Dancing Script', cursive;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .tagline {
@@ -192,66 +213,84 @@
 .cta-button:hover {
   background: var(--fresh-green);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 
 @media (max-width: 900px) {
+
+  .lantern-yellow {
+    left: 80%;
+  }
+
   .hero-content-container {
     flex-direction: column-reverse;
     align-items: center;
     gap: 4rem;
   }
+
   .hero-text-content {
     text-align: center;
     padding: 1.5rem 0;
   }
+
   .hero-image-container {
     min-width: 180px;
     margin: auto;
-    height: 300px; /* Adjust for smaller screen */
+    height: 300px;
+    /* Adjust for smaller screen */
   }
+
   .hero-showcase-image--main {
     width: 220px;
     height: 300px;
     border-radius: 1.2rem 0.5rem 1.2rem 0.5rem;
   }
+
   .hero-showcase-image--secondary {
     width: 100px;
     height: 130px;
   }
+
   .hero-showcase-image--secondary:nth-of-type(2) {
-  right: 85%;
-  top: 55%;
+    right: 85%;
+    top: 55%;
   }
+
   .hero-showcase-image--secondary:nth-of-type(3) {
-  left: 95%;
-  top: 60%;
+    left: 95%;
+    top: 60%;
   }
+
   .hero-showcase-image--secondary:nth-of-type(4) {
-  left: 40%;
-  top: 80%;
+    left: 40%;
+    top: 80%;
   }
-  
+
 }
 
 @media (max-width: 600px) {
+
   .hero-title {
     font-size: 2.2rem;
   }
+
   .hero-tagline {
     font-size: 1rem;
     padding: 0 10px;
   }
+
   .hero-showcase-image--main {
     width: 180px;
     height: 240px;
     border-radius: 1.2rem 0.5rem 1.2rem 0.5rem;
   }
+
   .hero-showcase-image--secondary {
     width: 80px;
     height: 110px;
   }
+
   .hero-cta-button {
     padding: 12px 20px;
     font-size: 1rem;
