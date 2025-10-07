@@ -2,9 +2,7 @@ import './styles/Contact.css';
 
 function Contact() {
 	const hours = [
-		{ day: 'Mon - Fri', time: '8:00 AM – 8:00 PM' },
-		{ day: 'Sat', time: '9:00 AM – 9:00 PM' },
-		{ day: 'Sun', time: '9:00 AM – 6:00 PM' },
+		{ day: 'Mon - Sun', time: '10:00 AM – 10:00 PM' },
 	];
 
 	return (

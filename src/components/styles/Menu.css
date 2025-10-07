@@ -4,7 +4,7 @@
 .showcase-menu {
   position: relative;
   padding: 80px 30px 140px;
-  background: url('https://images.unsplash.com/photo-1757664712627-868519088717?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+  background: url('../../assets/hero-main-image.png') center/cover no-repeat;
   color: var(--cream);
 }
 
@@ -13,7 +13,7 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(120deg, rgba(27,14,5,0.85), rgba(90,45,15,0.75));
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
 }
 
 .menu-inner { position: relative; max-width: 1250px; margin: 0 auto; }
@@ -102,7 +102,7 @@
 }
 
 .category-item {
-  background: rgba(0, 0, 0, 0.20);
+  background: rgba(0, 0, 0, 0.50);
   border-radius: 10px;
   padding: 12px 14px;
   border: 1px solid rgba(255,255,255,0.06);

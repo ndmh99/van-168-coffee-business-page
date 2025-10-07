@@ -29,7 +29,7 @@ function Footer() {
 
 			<div className="footer-bottom">
 				<span>© {new Date().getFullYear()} Van 168 Coffee</span>
-				<span>168 Main St, Vancouver, BC</span>
+				<span>138-888 Kingsway Vancouver, BC V5V3C3</span>
 			</div>
 		</footer>
 	);

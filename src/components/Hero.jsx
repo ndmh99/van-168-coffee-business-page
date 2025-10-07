@@ -28,7 +28,7 @@ function Hero() {
                     <p className="hero-tagline">
                         138-888 Kingsway Vancouver, BC V5V3C3. <br />
                         From 10am - 10pm Daily <br />
-                        Phone: (604) 555-1234
+                        Phone: (604) 428-6968
                     </p>
                     <button className="hero-cta-button" onClick={scrollToMenu}>
                         Explore Our Menu
