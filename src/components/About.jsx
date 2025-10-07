@@ -1,5 +1,5 @@
 import './styles/About.css';
-import aboutVideo from '../assets/VAN168COFFEE-ABOUT.mp4';x 
+import aboutVideo from '../assets/VAN168COFFEE-ABOUT.mp4';
 import OwnerCharacter from '../assets/owner-character.png';
 import aboutPoster from '../assets/about-poster.png';
 
