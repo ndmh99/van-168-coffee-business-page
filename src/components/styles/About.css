@@ -1,6 +1,7 @@
 /* About Page Design */
 .about-section {
   background-color: var(--cream-soft);
+  background-image: url("https://www.transparenttextures.com/patterns/xv.png");
   padding: 8vw 5vw;
   font-family: 'Georgia', serif;
 }
@@ -21,7 +22,7 @@
 
 .about-main-title {
   font-size: 1.8rem;
-  color: var(--wood-brown);
+  color: #ec2020;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: 600;
@@ -49,16 +50,44 @@
   border-left: 4px solid var(--flower-pink);
   font-size: 1.1rem;
   color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 30px 30px 0 30px;
 }
 
 .about-story-quote p {
-  margin: 0 0 0.5rem;
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-.about-story-quote footer {
+/* Quote block custom layout */
+.about-quote-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.about-quote-text {
+  flex: 1;
+  margin: 0;
+}
+
+.about-quote-image {
+  width: 130px;
+  max-width: 35vw;
+  height: auto;
+  /* border-radius: 12px; */
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.08); */
+  /* background: #ffffff; */
+}
+
+.about-quote-author {
   font-style: italic;
   color: var(--wood-brown);
   font-weight: bold;
+  width: 100%;
+  text-align: left;
 }
 
 .about-visuals-panel {
@@ -121,7 +150,7 @@
 .handwritten-note {
   background-color: #fffaf0;
   /* A creamy, paper-like color */
-  background-image: url('https://www.transparenttextures.com/patterns/paper.png');
+background-image: url("https://www.transparenttextures.com/patterns/diagonales-decalees.png");
   /* Paper texture */
   padding: 40px 30px 30px;
   border-radius: 5px;
@@ -137,6 +166,7 @@
   color: var(--wood-brown);
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 20px;
   font-weight: bold;
 
   text-decoration: underline;
@@ -157,6 +187,7 @@
   color: #333;
   line-height: 1.6;
   font-family: 'American Typewriter', serif;
+  margin-bottom: 0;
 }
 
 .note-description {
@@ -175,5 +206,27 @@
     position: static;
     top: auto;
     margin-bottom: 3rem;
+  }
+
+  .about-story-quote {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .about-quote-content {
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    gap: 0.5rem;
+  }
+  .about-quote-image {
+    width: 60vw;
+    max-width: 180px;
+    margin-top: 0.5rem;
+  }
+  .about-quote-text {
+    font-size: 1.1rem;
+  }
+  .about-quote-author {
+    font-size: 1rem;
+    margin-top: 0.3rem;
   }
 }

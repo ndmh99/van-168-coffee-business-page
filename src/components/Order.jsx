@@ -42,7 +42,7 @@ function Order() {
 							<p className="panel-description">Your favorite dishes, delivered.</p>
 						</div>
 						<div className="panel-options">
-							<a href="https://www.doordash.com/" target="_blank" rel="noopener noreferrer" className="panel-option-card">
+							<a href="https://www.doordash.com/store/van-168-coffee-vancouver-29694586" target="_blank" rel="noopener noreferrer" className="panel-option-card">
 								<DoordashIcon className="option-icon delivery-icon" />
 								<span className="option-title">DoorDash</span>
 								<span className="option-cta">Order Now</span>
@@ -52,7 +52,7 @@ function Order() {
 								<span className="option-title">Uber Eats</span>
 								<span className="option-cta">Order Now</span>
 							</a>
-							<a href="https://www.skipthedishes.com/" target="_blank" rel="noopener noreferrer" className="panel-option-card">
+							<a href="https://www.skipthedishes.com/van-168-coffee" target="_blank" rel="noopener noreferrer" className="panel-option-card">
 								<SkipIcon className="option-icon delivery-icon" />
 								<span className="option-title">SkipTheDishes</span>
 								<span className="option-cta">Order Now</span>
