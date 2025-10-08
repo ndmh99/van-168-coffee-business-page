@@ -259,11 +259,3 @@ font-weight: bold;
     margin-top: 0.3rem;
   }
 }
-
-@media (max-width: 600px) {
-
-  .about-story-text::after,
-  .about-story-text::before {
-    content: '༻𐫱༻𐫱༺༻𐫱༺·༻𐫱༺·༻𐫱༺·༻𐫱༺·༻𐫱༺·༻𐫱༺·༻𐫱';
-  }
-}
