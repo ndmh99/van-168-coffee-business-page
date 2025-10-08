@@ -1,23 +1,146 @@
 @import '../../colors.css';
 
-.footer { background: linear-gradient(135deg, var(--wood-brown) 0%, #A0522D 100%); color: var(--cream); padding-top: 28px; }
-.footer-container { max-width: 1100px; margin: 0 auto; padding: 0 20px 20px; display: grid; grid-template-columns: 1.2fr 1fr 0.8fr; gap: 20px; align-items: center; }
+:root {
+  --footer-bg: rgb(0, 41, 2);
+  --footer-accent: #c86b3a;
+  --footer-text: #ffffff;
+}
 
-.brand-name { font-family: 'Dancing Script', cursive; font-size: 1.8rem; }
-.brand-tag { color: #fffa; }
+.footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 0;
+  position: relative;
+}
 
-.footer-nav { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
-.footer-nav button { background: #ffffff22; color: #fff; border: 1px solid #ffffff33; padding: 8px 12px; border-radius: 999px; cursor: pointer; }
-.footer-nav button:hover { background: var(--fresh-green); border-color: transparent; }
+.footer-accent-line {
+  height: 4px;
+  background: linear-gradient(90deg, var(--footer-accent), #e06b3a);
+  width: 100%;
+}
 
-.footer-social { display: flex; gap: 12px; justify-content: flex-end; }
-.footer-social a { font-size: 1.2rem; text-decoration: none; color: #fff; background: #ffffff22; padding: 8px; border-radius: 10px; border: 1px solid #ffffff33; }
-.footer-social a:hover { background: var(--flower-red); border-color: transparent; }
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-.footer-bottom { border-top: 1px dashed #ffffff55; padding: 12px 20px; display: flex; justify-content: space-between; font-size: 0.9rem; color: #fffd; }
+.footer-main {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
 
-@media (max-width: 900px) {
-  .footer-container { grid-template-columns: 1fr; text-align: center; }
-  .footer-social { justify-content: center; }
-  .footer-bottom { flex-direction: column; gap: 6px; text-align: center; }
+.brand-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.6rem;
+  margin-bottom: 2px;
+}
+
+.brand-tag {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.footer-nav button {
+  background: transparent;
+  color: var(--footer-text);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.footer-nav button:hover {
+  background: rgba(200, 107, 58, 0.2);
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--footer-text);
+  background: rgba(255, 255, 255, 0.08);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.footer-social a:hover {
+  background: var(--footer-accent);
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-address {
+  position: relative;
+  padding-left: 16px;
+}
+
+.footer-address:before {
+  content: '•';
+  position: absolute;
+  left: 6px;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .footer-main {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+  
+  .footer-social {
+    margin-top: 4px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+    padding: 12px;
+  }
+  
+  .footer-address {
+    padding-left: 0;
+  }
+  
+  .footer-address:before {
+    display: none;
+  }
 }

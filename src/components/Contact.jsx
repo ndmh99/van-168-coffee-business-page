@@ -63,7 +63,7 @@ function Contact() {
 
 			<div className="contact-container">
 				<header className="contact-header">
-					<h2 className="contact-title">Get in Touch</h2>
+					<h2 className="contact-title">Contact Us</h2>
 					<p className="contact-subtitle">Questions, orders, or just say hi — we’re here.</p>
 				</header>
 
@@ -109,13 +109,17 @@ function Contact() {
 						<div className="map-card" aria-hidden="false">
 							<iframe
 								className="map-iframe"
-								src="https://www.google.com/maps?q=138+Kingsway+Vancouver+BC&output=embed"
-								title="VAN168 Coffee location map"
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.1430176836207!2d-123.08597870000001!3d49.2547351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486717e58de0b3d%3A0x6469f8c985d21dd4!2sVan%20168%20Coffee!5e0!3m2!1sen!2sca!4v1759905294518!5m2!1sen!2sca"
+								width="100%"
+								height="220"
+								style={{ border: 0 }}
+								allowFullScreen=""
 								loading="lazy"
 								referrerPolicy="no-referrer-when-downgrade"
-								aria-label="Map showing location of VAN168 Coffee"
+								title="Van 168 Coffee location map"
+								aria-label="Map showing location of Van 168 Coffee"
 							></iframe>
-							<a className="map-open" href="https://www.google.com/maps/search/?api=1&query=138+Kingsway+Vancouver+BC" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+							<a className="map-open" href="https://www.google.com/maps/place/Van+168+Coffee/@49.2547351,-123.0859787,17z" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
 						</div>
 					</div>
 
