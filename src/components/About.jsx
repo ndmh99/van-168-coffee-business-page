@@ -25,14 +25,14 @@ function About() {
       },
       {
         title: <strong>ᯓ Rẻ</strong>,
-        description: "Affordable Prices for All."
+        description: "Affordable Prices for All..."
       }
     ]
   };
 
   return (
     <section id="about" className="about-section">
-      <h2 className="about-heading">꧁About Us꧂</h2>
+      <h2 className="about-heading">꧁ About Us ꧂</h2>
       <div className="about-grid-container">
         <div className="about-story-panel">
           <h2 className="about-main-title">{storyData.title}</h2>

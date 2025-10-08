@@ -1,15 +1,15 @@
 /* About Page Design */
 .about-section {
-  background-color: var(--cream-soft);
+  background-color: #fffbf6;
   background-image: url("https://www.transparenttextures.com/patterns/xv.png");
-  padding: 4vw 5vw;
+  padding: 1vw 5vw;
   font-family: 'Georgia', serif;
 }
 
 .about-heading {
 font-family: 'Dancing Script', cursive;
 font-size: 3.5rem;
-margin: 0 0 50px;
+margin: 20px 0 30px;
 color: brown;
 text-align: center;
 font-weight: bold;
@@ -226,6 +226,11 @@ font-weight: bold;
     position: static;
     top: auto;
     margin-bottom: 3rem;
+  }
+
+  .about-heading {
+    font-size: 2.6rem;
+    margin-bottom: 0px;
   }
 
   .about-story-quote {
