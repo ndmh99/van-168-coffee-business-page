@@ -76,9 +76,9 @@ const categories = [
 
 function PriceDisplay({ price, prices }) {
 	if (prices) {
-		return <span className="price-multi">S ${prices.S.toFixed(2)} <span className="divider">|</span> L ${prices.L.toFixed(2)}</span>;
+		return <span className="price-multi">C${prices.S.toFixed(2)} <span className="divider">|</span>C${prices.L.toFixed(2)}</span>;
 	}
-	return <span className="price-single">${price.toFixed(2)}</span>;
+	return <span className="price-single">C${price.toFixed(2)}</span>;
 }
 
 function FeaturedCard({ item }) {

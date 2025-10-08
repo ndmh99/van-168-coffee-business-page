@@ -10,7 +10,7 @@ function Order() {
 		<section id="order" className="order-section-v2">
 			<div className="order-container-v2">
 				<header className="order-header-v2">
-					<h2 className="order-title-v2">How to Enjoy</h2>
+					<h2 className="order-title-v2">Reservation</h2>
 					<p className="order-subtitle-v2">Dine with us, pick up, or get it delivered.</p>
 				</header>
 

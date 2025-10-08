@@ -6,7 +6,7 @@ import aboutPoster from '../assets/about-poster.png';
 function About() {
   const storyData = {
     title: "A Founder's Journey",
-    subtitle: "From Resilience to Restaurant",
+    subtitle: "The birth of Van 168 Coffee",
     paragraphs: [
       "Van 168 Coffee began with founder Lynda’s journey to Canada nearly 40 years ago. Bringing her mother’s recipes and the rich culinary traditions of Northern Vietnam, she combined her love of cooking with a passion for sharing her heritage. Now a proud wife and mother of three, Lynda is excited to share her culture—one delicious dish at a time. Van 168 Coffee was established in 2023."
     ],
@@ -32,6 +32,7 @@ function About() {
 
   return (
     <section id="about" className="about-section">
+      <h2 className="about-heading">꧁About Us꧂</h2>
       <div className="about-grid-container">
         <div className="about-story-panel">
           <h2 className="about-main-title">{storyData.title}</h2>
@@ -41,17 +42,18 @@ function About() {
               <p key={i} className="about-story-text">{p}</p>
             ))}
           </div>
+
           <blockquote className="about-story-quote">
-          <div className="about-quote-content">
-            <p className="about-quote-text">"{storyData.quote.text}"</p>
-            <img className="about-quote-image" src={OwnerCharacter} alt="Owner Character" />
-          </div>
-          <footer className="about-quote-author">{storyData.quote.author}</footer>
+            <div className="about-quote-content">
+              <p className="about-quote-text">"{storyData.quote.text}"</p>
+              <img className="about-quote-image" src={OwnerCharacter} alt="Owner Character" />
+            </div>
+            <footer className="about-quote-author">{storyData.quote.author}</footer>
           </blockquote>
         </div>
         <div className="about-visuals-panel">
           <div className="about-video-container">
-            <video 
+            <video
               className="about-showcase-video"
               src={aboutVideo}
               poster={aboutPoster}
