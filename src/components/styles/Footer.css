@@ -8,6 +8,7 @@
 
 .footer {
   background: var(--footer-bg);
+    background-image: url("https://www.transparenttextures.com/patterns/xv.png");
   color: var(--footer-text);
   padding: 0;
   position: relative;

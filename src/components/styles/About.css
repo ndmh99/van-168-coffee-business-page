@@ -2,15 +2,15 @@
 .about-section {
   background-color: #fffbf6;
   background-image: url("https://www.transparenttextures.com/patterns/xv.png");
-  padding: 1vw 5vw;
+  padding: 3vw 5vw;
   font-family: 'Georgia', serif;
 }
 
 .about-heading {
 font-family: 'Dancing Script', cursive;
 font-size: 3.5rem;
-margin: 20px 0 30px;
-color: brown;
+margin: 30px 0 20px;
+color: var(--accent);
 text-align: center;
 font-weight: bold;
 }

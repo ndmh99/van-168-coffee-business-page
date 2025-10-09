@@ -101,7 +101,9 @@ function Contact() {
 							<Icon name="follow" />
 							<div>
 								<div className="info-title">Follow</div>
-								<div className="info-detail social">Instagram · Facebook · TikTok</div>
+								<div className="info-detail social">
+									<a href="https://www.instagram.com/van168coffee/" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.facebook.com/van168coffee" target="_blank" rel="noopener noreferrer">Facebook</a> · <a href="https://www.tiktok.com/@van168coffee" target="_blank" rel="noopener noreferrer">TikTok</a>
+								</div>
 							</div>
 						</div>
 
