@@ -137,7 +137,7 @@ function Menu() {
 	// PDF link logic
 	const drinksKey = 'drinks';
 	const pdfUrl = activeKey === drinksKey ? '/drinks.pdf' : '/menu.pdf';
-	const pdfLabel = activeKey === drinksKey ? 'See Full Drinks Menu (PDF) ->' : 'See Full Food Menu (PDF) ->';
+	const pdfLabel = activeKey === drinksKey ? 'See Drinks Menu →' : 'See Full Menu →';
 	return (
 		<section id="menu" className="menu showcase-menu">
 			<div className="menu-overlay" aria-hidden />

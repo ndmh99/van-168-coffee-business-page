@@ -1,5 +1,0 @@
-// Placeholder about image for Van 168 Coffee about page redesign.
-// Replace with a real photo of the coffee shop interior or team for production.
-
-import aboutImg from './react.svg';
-export default aboutImg;

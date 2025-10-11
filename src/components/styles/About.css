@@ -1,48 +1,451 @@
-/* About Page Design */
+@import '../../colors.css';
+
+:root {
+  --about-accent: #c86b3a;
+  --about-muted: #6b6b6b;
+  --about-card: #ffffff;
+}
+
 .about-section {
+  position: relative;
   background-color: #fffbf6;
   background-image: url("https://www.transparenttextures.com/patterns/xv.png");
-  padding: 3vw 5vw;
-  font-family: 'Georgia', serif;
+  padding: 72px 20px;
+  overflow: visible;
 }
 
-.about-heading {
-font-family: 'Dancing Script', cursive;
-font-size: 3.5rem;
-margin: 30px 0 20px;
-color: var(--accent);
-text-align: center;
-font-weight: bold;
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
-.about-grid-container {
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-title {
+  font-family: 'Dancing Script', cursive;
+  color: var(--about-accent);
+  font-size: 2.4rem;
+  margin: 0;
+  letter-spacing: 0.4px;
+}
+
+.about-subtitle {
+  color: var(--about-muted);
+  margin-top: 6px;
+  font-size: 0.98rem;
+}
+
+.about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5vw;
-  max-width: 1400px;
-  margin: 0 auto;
+  gap: 32px;
   align-items: start;
 }
 
-.about-story-panel {
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   position: sticky;
-  top: 100px;
+  top: 50px;
 }
 
-.about-main-title {
-  font-size: 1.8rem;
-  color: #ec2020;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-weight: 600;
-  margin-bottom: 1rem;
+.about-story-card {
+  background: var(--about-card);
+  border-radius: 0px 14px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(30, 30, 30, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-.about-main-subtitle {
-  font-size: 1.2rem;
-  color: var(--fresh-green);
+.story-title {
+  font-size: 1.5rem;
+  color: var(--about-accent);
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.story-subtitle {
+  font-size: 1rem;
+  color: var(--about-muted);
   font-style: italic;
-  margin-bottom: 2rem;
+  margin: 0 0 16px 0;
+}
+
+.story-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+}
+
+.story-text p {
+  margin: 0 0 12px 0;
+}
+
+.about-quote-card {
+  background: linear-gradient(135deg, rgba(200, 107, 58, 0.08), rgba(200, 107, 58, 0.02));
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-left: 2px solid var(--about-accent);
+}
+
+.quote-content {
+  flex: 1;
+}
+
+.quote-text {
+  font-size: 1.05rem;
+  color: #2d2d2d;
+  font-style: italic;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.quote-author {
+  font-size: 0.9rem;
+  color: var(--about-accent);
+  font-weight: 600;
+}
+
+.quote-image {
+  width: 90px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.highlight-card {
+  background: var(--about-card);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 6px 18px rgba(30, 30, 30, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(30, 30, 30, 0.08);
+}
+
+.highlight-icon {
+  font-size: 2rem;
+  flex: 0 0 50px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(200, 107, 58, 0.08);
+  border-radius: 9999px;
+}
+
+.highlight-content {
+  flex: 1;
+  text-align: center;
+}
+
+.highlight-title {
+  font-weight: 700;
+  color: #2d2d2d;
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.highlight-description {
+  color: var(--about-muted);
+  font-size: 0.95rem;
+}
+
+.about-media {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-video-card {
+  background: rgb(0, 41, 2);
+  background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 15px 40px rgba(0, 41, 2, 0.4);
+  border: 1px solid rgba(200, 107, 58, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-video-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #c86b3a, #e06b3a);
+}
+
+.media-header {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.media-title {
+  font-family: 'Dancing Script', cursive;
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: 0.4px;
+}
+
+.media-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 4px 0 0 0;
+  font-style: italic;
+}
+
+.about-video {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  background: #000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.about-gallery {
+  background: rgb(0, 41, 2);
+  background-image: url("https://www.transparenttextures.com/patterns/xv.png");
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 15px 40px rgba(0, 41, 2, 0.4);
+  border: 1px solid rgba(200, 107, 58, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-gallery::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #c86b3a, #e06b3a);
+}
+
+.gallery-header {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.gallery-title {
+  font-family: 'Dancing Script', cursive;
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: 0.4px;
+}
+
+.gallery-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 4px 0 0 0;
+  font-style: italic;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item.gallery-large {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 41, 2, 0.8), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    position: static;
+    top: auto;
+  }
+
+  .about-media {
+    position: static;
+    top: auto;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-quote-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .quote-image {
+    width: 120px;
+    align-self: center;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .gallery-item.gallery-large {
+    grid-column: 1 / -1;
+    aspect-ratio: 2 / 1;
+  }
+
+  .gallery-item {
+    aspect-ratio: 1;
+  }
+
+  .gallery-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0, 41, 2, 0.9), transparent 60%);
+    padding: 8px;
+  }
+
+  .overlay-text {
+    font-size: 0.85rem;
+  }
+
+  .about-gallery {
+    padding: 12px;
+  }
+
+  .gallery-header {
+    margin-bottom: 10px;
+  }
+
+  .gallery-title {
+    font-size: 1.5rem;
+  }
+
+  .gallery-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-card {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .highlight-content {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 40px 12px;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-story-card {
+    padding: 18px;
+  }
+
+  .story-title {
+    font-size: 1.3rem;
+  }
+
+  .highlight-icon {
+    font-size: 1.6rem;
+    flex: 0 0 42px;
+    height: 42px;
+  }
+
+  .highlight-title {
+    font-size: 1rem;
+  }
+
+  .media-title {
+    font-size: 1.5rem;
+  }
+
+  .media-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .about-video-card {
+    padding: 12px;
+  }
 }
 
 .about-story-text {

@@ -9,7 +9,7 @@
 }
 
 a { font-weight: 500; color: var(--fresh-green); text-decoration: inherit; }
-a:hover { color: var(--flower-red); }
+a:hover { color: var(--flower-yellow); }
 
 body {
   margin: 0;
@@ -35,6 +35,5 @@ button {
 }
 button:hover { box-shadow: 0 8px 22px rgba(139, 69, 19, 0.16); }
 button:active { transform: translateY(1px); }
-button:focus, button:focus-visible { outline: 3px solid rgba(46, 139, 87, 0.3); outline-offset: 2px; }
+/* button:focus, button:focus-visible { outline: 3px solid rgba(46, 139, 87, 0.3); outline-offset: 2px; } */
 
-/* Sections define their own backgrounds; keep the page canvas calm */

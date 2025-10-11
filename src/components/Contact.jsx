@@ -56,10 +56,7 @@ function Contact() {
 
 	return (
 		<section id="contact" className="contact">
-			<div className="contact-decor" aria-hidden="true">
-				<div className="shape shape-1" />
-				<div className="shape shape-2" />
-			</div>
+			
 
 			<div className="contact-container">
 				<header className="contact-header">
