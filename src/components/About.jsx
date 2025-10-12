@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './styles/About.css';
 import aboutVideo from '../assets/VAN168COFFEE-ABOUT.mp4';
 import OwnerCharacter from '../assets/owner-character.png';
@@ -9,6 +10,35 @@ import restaurantCustomerSeat from '../assets/restaurant-customer-seat.jpg';
 import restaurantVibe from '../assets/restaurant-vibe.jpg';
 
 function About() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState({ src: '', alt: '' });
+  const [isClosing, setIsClosing] = useState(false);
+
+  const galleryImages = [
+    { src: restaurantInside, alt: 'Restaurant interior', label: 'Cozy Interior', large: true },
+    { src: restaurantCounter, alt: 'Restaurant counter', label: 'Counter Service' },
+    { src: restaurantCustomerSeat, alt: 'Coffee shop atmosphere', label: 'Various Items' },
+    { src: restaurantVibe, alt: 'About Van 168 Coffee', label: 'Café Vibes' },
+    { src: restaurantOutside, alt: 'About Van 168 Coffee', label: 'Restaurant Outside' },
+  ];
+
+  const openLightbox = (src, alt) => {
+    setLightboxImage({ src, alt });
+    setLightboxOpen(true);
+    setIsClosing(false);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    setIsClosing(true);
+    // Wait for animation to complete before unmounting
+    setTimeout(() => {
+      setLightboxOpen(false);
+      setLightboxImage({ src: '', alt: '' });
+      setIsClosing(false);
+      document.body.style.overflow = 'auto';
+    }, 280); // Match the animation duration
+  };
   const storyData = {
     title: "A Founder's Journey",
     subtitle: "The birth of Van 168 Coffee",
@@ -104,41 +134,48 @@ function About() {
                 <p className="gallery-subtitle">A welcoming atmosphere</p>
               </div>
               <div className="gallery-grid">
-                <div className="gallery-item gallery-large">
-                  <img src={restaurantInside} alt="Restaurant interior" />
-                  <div className="gallery-overlay">
-                    <span className="overlay-text">Cozy Interior</span>
+                {galleryImages.map((image, index) => (
+                  <div 
+                    key={index} 
+                    className={`gallery-item ${image.large ? 'gallery-large' : ''}`}
+                    onClick={() => openLightbox(image.src, image.alt)}
+                  >
+                    <img src={image.src} alt={image.alt} />
+                    <div className="gallery-overlay">
+                      <span className="overlay-text">{image.label}</span>
+                    </div>
                   </div>
-                </div>
-                <div className="gallery-item">
-                  <img src={restaurantCounter} alt="Restaurant counter" />
-                  <div className="gallery-overlay">
-                    <span className="overlay-text">Counter Service</span>
-                  </div>
-                </div>
-                <div className="gallery-item">
-                  <img src={restaurantCustomerSeat} alt="Coffee shop atmosphere" />
-                  <div className="gallery-overlay">
-                    <span className="overlay-text">Various Items</span>
-                  </div>
-                </div>
-                <div className="gallery-item">
-                  <img src={restaurantVibe} alt="About Van 168 Coffee" />
-                  <div className="gallery-overlay">
-                    <span className="overlay-text">Café Vibes</span>
-                  </div>
-                </div>
-                <div className="gallery-item">
-                  <img src={restaurantOutside} alt="About Van 168 Coffee" />
-                  <div className="gallery-overlay">
-                    <span className="overlay-text">Restaurant Outside</span>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Lightbox Modal */}
+      {lightboxOpen && (
+        <div className={`lightbox-overlay ${isClosing ? 'closing' : ''}`} onClick={closeLightbox}>
+          <button className="lightbox-close" onClick={closeLightbox} aria-label="Close image viewer">
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2.5" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img src={lightboxImage.src} alt={lightboxImage.alt} className="lightbox-image" />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
