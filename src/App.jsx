@@ -5,7 +5,10 @@ import Menu from './components/Menu';
 import Order from './components/Order';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { Analytics } from '@vercel/analytics/react';  
+
+// Vercel Analytics and Speed Insights Integration
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function App() {
   useEffect(() => {
@@ -47,6 +50,7 @@ function App() {
       <Contact />
       <Footer />
       <Analytics />
+      <SpeedInsights />
       {/* GTranslate widget container */}
       <div className="gtranslate_wrapper"></div>
     </div>
