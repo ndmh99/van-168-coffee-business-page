@@ -5,6 +5,7 @@ import Menu from './components/Menu';
 import Order from './components/Order';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { Analytics } from '@vercel/analytics/react';  
 
 function App() {
   useEffect(() => {
@@ -45,6 +46,8 @@ function App() {
       <Order />
       <Contact />
       <Footer />
+      <Analytics />
+      {/* GTranslate widget container */}
       <div className="gtranslate_wrapper"></div>
     </div>
   );
