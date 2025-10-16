@@ -51,6 +51,7 @@
 
 .featured-card {
   background: rgba(255,255,255,0.08);
+  min-height: 392px;
   border: 1px solid rgba(255,255,255,0.15);
   backdrop-filter: blur(4px);
   border-radius: 18px;
@@ -72,13 +73,11 @@
   pointer-events: none;
 }
 
-.featured-card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px -6px rgba(0,0,0,0.4); }
-
 .featured-card-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .featured-name { font-size: 1.1rem; margin: 0; font-weight: 600; letter-spacing: .5px; }
 .featured-en { margin: 6px 0 14px; font-size: .88rem; color: var(--cream-soft); font-style: italic; }
 .featured-price { font-weight: 600; font-size: 0.95rem; }
-.featured-tag { background: linear-gradient(90deg,var(--flower-red),var(--flower-pink)); color: #fff; font-size: .65rem; padding: 4px 8px; border-radius: 999px; letter-spacing: .5px; text-align: center; }
+.featured-tag { background: linear-gradient(90deg,var(--flower-red),var(--flower-pink)); color: #fff; font-size: .65rem; padding: 4px 8px; border-radius: 999px; letter-spacing: .5px; text-align: center; font-weight: bold; }
 
 .price-multi, .price-single { font-weight: 600; color: var(--flower-yellow); display: inline-flex; align-items: center; }
 .price-multi .divider { color: rgba(255,255,255,0.4); margin: 0 6px; }

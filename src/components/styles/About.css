@@ -290,8 +290,16 @@
   aspect-ratio: 16 / 9;
 }
 
+.gallery-item:hover img {
+  transform: scale(1.2);
+  transition: transform 3s ease-in-out;
+}
+
 .gallery-item:hover {
-  transform: scale(1.02);
+  transform: scale(1.04);
+  transition: transform 1.5s ease;
+  border: var(--about-accent) 3px solid;
+  border-style: inset;
 }
 
 .gallery-item img {
@@ -304,7 +312,6 @@
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(to top, rgba(0, 41, 2, 0.8), transparent); */
   display: flex;
   align-items: flex-end;
   padding: 12px;
@@ -323,7 +330,6 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Lightbox Styles */
 .lightbox-overlay {
   position: fixed;
   top: 0;
@@ -435,6 +441,7 @@
 .lightbox-close:hover {
   transform: translateY(-3px) rotate(10deg) scale(1.06);
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55), 0 6px 12px rgba(200, 107, 58, 0.12) inset;
+  transition: transform 180ms cubic-bezier(.2,.9,.25,1), box-shadow 180ms;
 }
 
 .lightbox-close:hover svg {
