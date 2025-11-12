@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://van168coffee.vercel.app/sitemap.xml
-Sitemap: https://www.van168coffee.com/sitemap.xml
+Sitemap: https://van168coffee.com/sitemap.xml
