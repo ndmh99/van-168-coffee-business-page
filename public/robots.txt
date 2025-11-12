@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://van168coffee.vercel.app/sitemap.xml
+Sitemap: https://www.van168coffee.ca/sitemap.xml
