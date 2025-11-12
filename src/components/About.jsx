@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './styles/About.css';
-import aboutVideo from 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/VAN168COFFEE-ABOUT.mp4';
 import OwnerCharacter from '../assets/owner-character.png';
 import aboutPoster from '../assets/about-poster.png';
 import restaurantInside from '../assets/restaurant-inside.png';
@@ -13,6 +12,9 @@ function About() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState({ src: '', alt: '' });
   const [isClosing, setIsClosing] = useState(false);
+
+  
+  const aboutVideo = 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/VAN168COFFEE-ABOUT.mp4';
 
   const galleryImages = [
     { src: restaurantInside, alt: 'Restaurant interior', label: 'Cozy Interior', large: true },
@@ -39,6 +41,7 @@ function About() {
       document.body.style.overflow = 'auto';
     }, 280); // Match the animation duration
   };
+  
   const storyData = {
     title: "A Founder's Journey",
     subtitle: "The birth of Van 168 Coffee",
@@ -70,8 +73,6 @@ function About() {
 
   return (
     <section id="about" className="about-section">
-      
-
       <div className="about-container">
         <header className="about-header">
           <h2 className="about-title">About Us</h2>

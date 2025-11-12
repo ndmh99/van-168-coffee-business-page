@@ -1,15 +1,17 @@
-
 import './styles/Hero.css';
-import heroImg from 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/hero-main-image.png';
-import heroImg2 from 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/hero-secondary-image-1.png';
-import heroImg3 from 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/hero-secondary-image-2.png';
-import heroImg4 from 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/hero-secondary-image-3.png';
 
 function Hero() {
     const scrollToMenu = () => {
         const el = document.getElementById('menu');
         if (el) el.scrollIntoView({ behavior: 'smooth' });
     };
+    
+    // Define image URLs as constants
+    const heroImg = 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/hero-main-image.png';
+    const heroImg2 = 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/hero-secondary-image-1.png';
+    const heroImg3 = 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/hero-secondary-image-2.png';
+    const heroImg4 = 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/hero-secondary-image-3.png';
+    
     return (
         <section className="hero-section">
             {/* Decorative Lanterns */}
@@ -35,10 +37,10 @@ function Hero() {
                     </button>
                 </div>
                 <div className="hero-image-container">
-                <img src={heroImg} className="hero-showcase-image hero-showcase-image--main" alt="Main hero" />
-                <img src={heroImg4} className="hero-showcase-image hero-showcase-image--secondary" alt="Secondary 1" />
-                <img src={heroImg2} className="hero-showcase-image hero-showcase-image--secondary" alt="Secondary 2" />
-                <img src={heroImg3} className="hero-showcase-image hero-showcase-image--secondary" alt="Secondary 3" />
+                    <img src={heroImg} className="hero-showcase-image hero-showcase-image--main" alt="Main hero" />
+                    <img src={heroImg4} className="hero-showcase-image hero-showcase-image--secondary" alt="Secondary 1" />
+                    <img src={heroImg2} className="hero-showcase-image hero-showcase-image--secondary" alt="Secondary 2" />
+                    <img src={heroImg3} className="hero-showcase-image hero-showcase-image--secondary" alt="Secondary 3" />
                 </div>
             </div>
         </section>
