@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import './styles/About.css';
-import OwnerCharacter from '../assets/owner-character.png';
-import aboutPoster from '../assets/about-poster.png';
-import restaurantInside from '../assets/restaurant-inside.png';
-import restaurantOutside from '../assets/restaurant-outside.jpg';
-import restaurantCounter from '../assets/restaurant-counter.png';
-import restaurantCustomerSeat from '../assets/restaurant-customer-seat.jpg';
-import restaurantVibe from '../assets/restaurant-vibe.jpg';
 
 function About() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxImage, setLightboxImage] = useState({ src: '', alt: '' });
   const [isClosing, setIsClosing] = useState(false);
 
-  
+  // Asset URLs from GitHub
+  const OwnerCharacter = 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/owner-character.png';
+  const aboutPoster = 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/about-poster.png';
+  const restaurantInside = 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/restaurant-inside.png';
+  const restaurantOutside = 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/restaurant-outside.jpg';
+  const restaurantCounter = 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/restaurant-counter.png';
+  const restaurantCustomerSeat = 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/restaurant-customer-seat.jpg';
+  const restaurantVibe = 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/restaurant-vibe.jpg';
   const aboutVideo = 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/VAN168COFFEE-ABOUT.mp4';
 
   const galleryImages = [
