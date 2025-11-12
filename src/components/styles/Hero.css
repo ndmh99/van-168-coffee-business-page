@@ -1,6 +1,6 @@
 .hero-section {
   min-height: 100vh;
-  background: url('../../assets/restaurant-inside.png') no-repeat center center/cover;
+  background: url('https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/restaurant-inside.png') no-repeat center center/cover;
   position: relative;
   display: flex;
   align-items: center;

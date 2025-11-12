@@ -1,9 +1,9 @@
 
 import './styles/Hero.css';
-import heroImg from '../assets/hero-main-image.png';
-import heroImg2 from '../assets/hero-secondary-image-1.png';
-import heroImg3 from '../assets/hero-secondary-image-2.png';
-import heroImg4 from '../assets/hero-secondary-image-3.png';
+import heroImg from 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/hero-main-image.png';
+import heroImg2 from 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/hero-secondary-image-1.png';
+import heroImg3 from 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/hero-secondary-image-2.png';
+import heroImg4 from 'https://raw.githubusercontent.com/ndmh99/van-168-coffee-business-page/refs/heads/main/src/assets/hero-secondary-image-3.png';
 
 function Hero() {
     const scrollToMenu = () => {
